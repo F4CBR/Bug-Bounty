@@ -1,8 +1,10 @@
 # Bug-Bounty
-All in One tools Bug Bounty on Parrot OS <br />
-Penginstallan tools Bug Bounty meliputi Subfinder, Httpx, Nuclei, Paramspider, Dalfox, Kxss. <br />
+All in One tools for Bug Bounty on Parrot OS
 
-How to Run : <br />
-$ git clone https://github.com/F4CBR/Bug-Bounty.git <br />
-$ cd Bug-Bounty <br />
-$ bash main.sh <br />
+## Penginstallan tools Bug Bounty meliputi Subfinder, Httpx, Nuclei, Paramspider, Dalfox, Kxss.
+
+### Cara menjalankan:
+```bash
+$ git clone https://github.com/F4CBR/Bug-Bounty.git
+$ cd Bug-Bounty
+$ bash main.sh
