@@ -24,6 +24,7 @@ cd nuclei/v2/cmd/nuclei/
 go build .
 mv nuclei /usr/local/bin/
 nuclei -update-templates
+nuclei -update
 
 # Install Paramspider
 echo "Menginstall Paramspider"
