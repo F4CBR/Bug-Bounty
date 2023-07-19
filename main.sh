@@ -23,6 +23,7 @@ git clone https://github.com/projectdiscovery/nuclei.git
 cd nuclei/v2/cmd/nuclei/
 go build .
 mv nuclei /usr/local/bin/
+nuclei -update-templates
 
 # Install Paramspider
 echo "Menginstall Paramspider"
