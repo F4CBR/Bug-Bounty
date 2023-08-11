@@ -8,20 +8,6 @@ function print_green() {
 # Store the current directory
 SCRIPT_DIR="$(pwd)"
 
-# Remove old version of Go
-print_green "Menghapus versi lama Go..."
-yes | sudo apt-get remove golang-go
-yes | sudo apt-get remove --auto-remove golang-go
-
-# Install the new version of Go
-print_green "Menginstall versi baru Go..."
-sudo wget https://go.dev/dl/go1.21.0.linux-amd64.tar.gz
-sudo tar -C /usr/local -xvf go1.21.0.linux-amd64.tar.gz
-
-# Add Go binary directory to PATH in $HOME/.profile
-echo 'export PATH=$PATH:/usr/local/go/bin' >> $HOME/.profile
-source $HOME/.profile  # Apply changes to the current session
-
 clear; print_green "Penginstallan tools Bug Bounty\n=============================="; sleep 2
 
 # Function to check if a tool is installed
