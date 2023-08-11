@@ -18,8 +18,9 @@ print_green "Menginstall versi baru Go..."
 sudo wget https://go.dev/dl/go1.21.0.linux-amd64.tar.gz
 sudo tar -C /usr/local -xvf go1.21.0.linux-amd64.tar.gz
 
-# Add Go binary directory to PATH
-export PATH=$PATH:/usr/local/go/bin
+# Add Go binary directory to PATH in $HOME/.profile
+echo 'export PATH=$PATH:/usr/local/go/bin' >> $HOME/.profile
+source $HOME/.profile  # Apply changes to the current session
 
 clear; print_green "Penginstallan tools Bug Bounty\n=============================="; sleep 2
 
