@@ -5,6 +5,9 @@ function print_green() {
   echo -e "\033[1;32m$1\033[0m"
 }
 
+# Store the current directory
+SCRIPT_DIR="$(pwd)"
+
 clear; print_green "Penginstallan tools Bug Bounty\n=============================="; sleep 2
 
 # Function to check if a tool is installed
@@ -15,6 +18,9 @@ function is_tool_installed() {
     return 1  # Tool is not installed
   fi
 }
+
+# Change to the target directory
+cd /home/parrot/Tools
 
 # Update and Upgrade the system
 print_green "Memperbarui paket dan sistem..."; sudo apt update && sudo apt upgrade
@@ -51,4 +57,5 @@ if ! is_tool_installed "kxss"; then
 fi
 
 # Instalasi selesai
+cd "$SCRIPT_DIR"  # Navigate back to the main installation directory
 clear; sleep 2; print_green "Instalasi selesai"
