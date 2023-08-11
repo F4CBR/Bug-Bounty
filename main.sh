@@ -62,7 +62,7 @@ fi
 if ! is_tool_installed "paramspider"; then
   clear; print_green "Menginstall Paramspider"; sleep 2; 
   git clone https://github.com/devanshbatham/ParamSpider.git && 
-  cd ParamSpider && pip3 install -r requirements.txt
+  cd ParamSpider && pip3 install -r requirements.txt &&
   sudo ln -s "$(pwd)/paramspider.py" /usr/local/bin/paramspider
   cd "$SCRIPT_DIR"  # Navigate back to the main installation directory
 fi
