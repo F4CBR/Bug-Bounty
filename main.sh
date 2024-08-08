@@ -115,8 +115,17 @@ fi
 # Install Waybackurls
 if ! is_tool_installed "waybackurls"; then
   clear; print_green "Menginstall Waybackurls"; sleep 2; 
-  ▶ go install github.com/tomnomnom/waybackurls@latest
+  go install github.com/tomnomnom/waybackurls@latest
   sudo cp /root/go/bin/waybackurls /usr/local/bin/waybackurls
+fi
+
+# Install FFUF
+if ! is_tool_installed "ffuf"; then
+  clear; print_green "Menginstall FFUF"; sleep 2; 
+  git clone https://github.com/ffuf/ffuf 
+  cd ffuf && go get && go build
+  sudo ln -s "$(pwd)/ffuf.py" /usr/local/bin/ffuf
+  cd "$SCRIPT_DIR"  # Navigate back to the main installation directory
 fi
 
 # Instalasi selesai
