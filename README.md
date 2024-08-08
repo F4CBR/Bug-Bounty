@@ -1,6 +1,6 @@
 
 ## All in One tools for Bug Bounty on Parrot OS
-Penginstallan tools Bug Bounty meliputi Subfinder, Httpx, Nuclei, Paramspider, Dalfox, Kxss, Katana, LinkFinder, Secretfinder, Sublist3r, Waybackurls. <br>
+Penginstallan tools Bug Bounty meliputi <b>Subfinder, Httpx, Nuclei, Paramspider, Dalfox, Kxss, Katana, LinkFinder, Secretfinder, Sublist3r, Waybackurls.</b> <br>
 <b><i>Termasuk Instalasi Go ke versi 1.22.6 </i></b>
 
 ### Cara menjalankan:
