@@ -5,8 +5,8 @@ Penginstallan tools Bug Bounty meliputi <b>Subfinder, Httpx, Nuclei, Paramspider
 
 ### Cara menjalankan:
 ```bash
-$ git clone https://github.com/F4CBR/Bug-Bounty.git Tools
-$ cd Tools
-$ sudo apt-get install dos2unix
-$ dos2unix main.sh
-$ bash main.sh
+git clone https://github.com/F4CBR/Bug-Bounty.git Tools
+cd Tools
+sudo apt-get install dos2unix
+dos2unix main.sh
+bash main.sh
