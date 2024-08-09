@@ -24,7 +24,8 @@ print_green "Memperbarui paket dan sistem..."; sudo apt update && sudo apt upgra
 
 # Install Go
 if ! which go &>/dev/null; then
-  clear; print_green "Menginstall Go..."; sleep 2; 
+  clear; print_green "Menginstall Go..."; sleep 2;
+  sudo rm /usr/lib/python3.11/EXTERNALLY-MANAGED
   sudo wget https://go.dev/dl/go1.22.6.linux-amd64.tar.gz
   sudo tar -C /usr/local -xvf go1.22.6.linux-amd64.tar.gz
   echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
