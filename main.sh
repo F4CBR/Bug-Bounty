@@ -125,7 +125,7 @@ if ! is_tool_installed "ffuf"; then
   clear; print_green "Menginstall FFUF"; sleep 2; 
   git clone https://github.com/ffuf/ffuf 
   cd ffuf && go get && go build
-  sudo ln -s "$(pwd)/ffuf.py" /usr/local/bin/ffuf
+  mv ffuf /usr/local/bin/ffuf
   cd "$SCRIPT_DIR"  # Navigate back to the main installation directory
 fi
 
