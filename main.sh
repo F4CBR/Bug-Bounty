@@ -100,6 +100,7 @@ if ! is_tool_installed "secretfinder"; then
   clear; print_green "Menginstall Secretfinder"; sleep 2; 
   git clone https://github.com/m4ll0k/SecretFinder.git secretfinder
   cd secretfinder && python -m pip install -r requirements.txt or pip install -r requirements.txt
+  chmod +x Secretfinder.py
   sudo ln -s "$(pwd)/Secretfinder.py" /usr/local/bin/secretfinder
   cd "$SCRIPT_DIR"  # Navigate back to the main installation directory
 fi
