@@ -73,9 +73,8 @@ fi
 # Install kxss
 if ! is_tool_installed "kxss"; then
   clear; print_green "Menginstall kxss"; sleep 2; 
-  git clone https://github.com/Emoe/kxss.git && 
-  cd kxss && go mod init kxss &>/dev/null && go mod tidy &>/dev/null && 
-  go get github.com/Emoe/kxss && go install github.com/Emoe/kxss && sudo cp /root/go/bin/kxss /usr/local/bin/kxss
+  go install github.com/Emoe/kxss@latest 
+  sudo cp /root/go/bin/kxss /usr/local/bin/kxss
   cd "$SCRIPT_DIR"  # Navigate back to the main installation directory
 fi
 
