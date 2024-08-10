@@ -149,6 +149,13 @@ if ! is_tool_installed "shosubgo"; then
   sudo cp /root/go/bin/shosubgo /usr/local/bin/shosubgo
 fi
 
+# Install anew
+if ! is_tool_installed "anew"; then
+  clear; print_green "Menginstall anew"; sleep 2; 
+  go install -v github.com/tomnomnom/anew@latest
+  sudo cp /root/go/bin/anew /usr/local/bin/anew
+fi
+
 # Install gau
 if ! is_tool_installed "gau"; then
   clear; print_green "Menginstall gau"; sleep 2; 
