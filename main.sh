@@ -130,5 +130,53 @@ if ! is_tool_installed "ffuf"; then
   cd "$SCRIPT_DIR"  # Navigate back to the main installation directory
 fi
 
+# Install Freq
+if ! is_tool_installed "freq"; then
+  clear; print_green "Menginstall Freq"; sleep 2; 
+  go install github.com/takshal/freq@latestt
+  sudo cp /root/go/bin/freq /usr/local/bin/freq
+fi
+
+# Install qsreplace
+if ! is_tool_installed "qsreplace"; then
+  clear; print_green "Menginstall qsreplace"; sleep 2; 
+  go install github.com/tomnomnom/qsreplace@latest
+  sudo cp /root/go/bin/qsreplace /usr/local/bin/qsreplace
+fi
+
+# Install Shosubgo
+if ! is_tool_installed "shosubgo"; then
+  clear; print_green "Menginstall Shosubgo"; sleep 2; 
+  go install github.com/incogbyte/shosubgo@latest
+  sudo cp /root/go/bin/shosubgo /usr/local/bin/shosubgo
+fi
+
+# Install gau
+if ! is_tool_installed "gau"; then
+  clear; print_green "Menginstall gau"; sleep 2; 
+  go install github.com/lc/gau/v2/cmd/gau@latest
+  sudo cp /root/go/bin/gau /usr/local/bin/gau
+  wget https://raw.githubusercontent.com/lc/gau/master/.gau.toml
+  mv "$(pwd)/.gau.toml" /root/.gau.toml
+  cd "$SCRIPT_DIR"  # Navigate back to the main installation directory
+fi
+
+# Install urldedupe
+if ! is_tool_installed "urldedupe"; then
+  clear; print_green "Menginstall urldedupe"; sleep 2; 
+  git clone https://github.com/ameenmaali/urldedupe.git && cd urldedupe
+  apt install cmake && cmake CMakeLists.txt && make
+  mv "$(pwd)/urldedupe" /usr/local/bin/urldedupe
+  cd "$SCRIPT_DIR"  # Navigate back to the main installation directory
+fi
+
+# Setup Gf-Patterns
+if [ ! -d "/root/.gf" ]; then
+  clear; print_green "Mengsetup Gf-Patterns"; sleep 2;
+  git clone https://github.com/emadshanab/Gf-Patterns-Collection.git && cd Gf-Patterns-Collection
+  chmod +x set-all.sh && ./set-all.sh
+  cd "$SCRIPT_DIR"  # Kembali ke direktori utama instalasi
+fi
+
 # Instalasi selesai
 clear; sleep 2; print_green "Instalasi selesai"
