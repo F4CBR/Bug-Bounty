@@ -57,8 +57,7 @@ fi
 # Install Paramspider
 if ! is_tool_installed "paramspider"; then
   clear; print_green "Menginstall Paramspider"; sleep 2; 
-  git clone https://github.com/devanshbatham/ParamSpider.git && 
-  cd ParamSpider && pip3 install .
+  git clone https://github.com/devanshbatham/ParamSpider.git && cd ParamSpider && pip3 install .
   sudo ln -s "$(pwd)/paramspider.py" /usr/local/bin/paramspider
   cd "$SCRIPT_DIR"  # Navigate back to the main installation directory
 fi
