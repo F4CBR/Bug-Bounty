@@ -178,6 +178,8 @@ fi
 # Setup Gf-Patterns
 if [ ! -d "/root/.gf" ]; then
   clear; print_green "Mengsetup Gf-Patterns"; sleep 2;
+  go install github.com/tomnomnom/gf@latest
+  sudo cp /root/go/bin/gf /usr/local/bin/gf
   git clone https://github.com/emadshanab/Gf-Patterns-Collection.git && cd Gf-Patterns-Collection
   chmod +x set-all.sh && ./set-all.sh
   cd "$SCRIPT_DIR"  # Kembali ke direktori utama instalasi
