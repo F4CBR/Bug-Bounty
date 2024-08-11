@@ -131,7 +131,7 @@ fi
 # Install Freq
 if ! is_tool_installed "freq"; then
   clear; print_green "Menginstall Freq"; sleep 2; 
-  go install github.com/takshal/freq@latestt
+  go install github.com/takshal/freq@latest
   sudo cp /root/go/bin/freq /usr/local/bin/freq
 fi
 
