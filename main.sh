@@ -175,11 +175,16 @@ if ! is_tool_installed "urldedupe"; then
   cd "$SCRIPT_DIR"  # Navigate back to the main installation directory
 fi
 
+# Install gf
+if ! is_tool_installed "gf"; then
+  clear; print_green "Menginstall gf"; sleep 2; 
+  go install github.com/tomnomnom/gf@latest
+  sudo cp /root/go/bin/gf /usr/local/bin/gf
+fi
+
 # Setup Gf-Patterns
 if [ ! -d "/root/.gf" ]; then
   clear; print_green "Mengsetup Gf-Patterns"; sleep 2;
-  go install github.com/tomnomnom/gf@latest
-  sudo cp /root/go/bin/gf /usr/local/bin/gf
   git clone https://github.com/emadshanab/Gf-Patterns-Collection.git && cd Gf-Patterns-Collection
   chmod +x set-all.sh && ./set-all.sh
   cd "$SCRIPT_DIR"  # Kembali ke direktori utama instalasi
